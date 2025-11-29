@@ -1,12 +1,15 @@
-import pymysql
+import pymysql, os
 
 class pysql:
     def __init__(self):
+        senha = os.getenv("AIVEN_PASSWORD")
         self.config = {
-            "host": "localhost",
-            "user": "root",
-            "password": "",
+            "host": "mysql-jetmoney.k.aivencloud.com",
+            "user": "avnadmin",
+            "password": senha,
             "db": "dbjetmoney",
+            "port": 14013,
+            "ssl": {"ssl-mode": "REQUIRED"},
             "charset": "utf8",
             "use_unicode": True
         }

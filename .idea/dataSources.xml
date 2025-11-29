@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="mysql" uuid="8fbf6982-2e29-4d20-ae9a-db111000a8b4">
+    <data-source source="LOCAL" name="mysql" uuid="049bea75-ad45-46f6-bed6-47a1799cd5b5">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/dbjetmoney</jdbc-url>
+      <jdbc-url>jdbc:mysql://mysql-jetmoney.k.aivencloud.com:14013/dbjetmoney</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
