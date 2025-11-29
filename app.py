@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, url_for, redirect
 from models import pysql
-import json, os
+import json
 
 app = Flask(__name__)
 
@@ -63,5 +63,4 @@ def dados():
             return redirect(url_for("home"))
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)
