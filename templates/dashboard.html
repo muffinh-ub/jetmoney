@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Financeiro</title>
+  <!-- Chart.js CDN (simples e confiável) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 20px; }
+    .card { max-width: 900px; margin: 0 auto; padding: 18px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); background: #fff; }
+    canvas { width:100% !important; height:400px !important; }
+  </style>
 </head>
 <body>
-$END$
+  <div class="card">
+    <h2>Dashboard Financeiro</h2>
+    <canvas id="transacoesChart"></canvas>
+  </div>
+
+  <script>
+    // dados vindos do Flask (já são strings JSON)
+    const labels = {{ labels | safe }};
+    const valores = {{ valores | safe }};
+
+    const ctx = document.getElementById('transacoesChart').getContext('2d');
+    const transacoesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Valor (R$)',
+          data: valores,
+          fill: true,
+          tension: 0.3,
+          pointRadius: 3,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: { display: true, text: 'Data' }
+          },
+          y: {
+            display: true,
+            title: { display: true, text: 'Valor' },
+            beginAtZero: false
+          }
+        },
+        plugins: {
+          legend: { display: true }
+        }
+      }
+    });
+  </script>
 </body>
 </html>

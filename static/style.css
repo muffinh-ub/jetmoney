@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Cor de texto mais suave e line-height para melhor leitura */
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #000;
+    padding: 35px 28px; /* Mais preenchimento */
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    opacity: 0.85;
+}
+
+/* ===== NAVBAR SUPERIOR ===== */
+nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    max-width: 1200px; /* Largura maior */
+    margin: auto;
+    padding: 14px 20px;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-color: #000;
+    color: #000;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.layout {
+    display: flex;
+    max-width: 1200px; /* Aumentei a largura máxima */
+    margin: 40px auto;
+    padding: 0 25px;
+    gap: 30px; /* Mais espaçamento */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 280px; /* Um pouco mais larga */
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    /* Substitui a borda pela sombra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #eee; /* Linha de separação */
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 14px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    background: #fff;
+    padding: 40px; /* Mais preenchimento interno */
+    border-radius: 12px;
+    /* Substitui a borda pela sombra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+    margin-bottom: 30px;
+    color: #111;
+    font-size: 1.8rem;
+    border-left: 5px solid #000; /* Borda mais grossa */
+    padding-left: 15px;
+}
+
+/* ===== FORM ===== */
+.form-transacao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Mais espaçamento */
+}
+
+label {
+    font-weight: 600;
+    color: #222;
+}
+
+input, select, textarea {
+    padding: 14px; /* Mais preenchimento */
+    border: 1px solid #ddd; /* Borda mais clara */
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #000;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Anel de foco mais suave */
+}
+
+/* ===== BOTÕES ===== */
+.btn-area {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilos de botão base */
+input[type="submit"], button {
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Botão principal (preto) */
+input[type="submit"] {
+    border: none;
+    background: #000;
+    color: #fff;
+}
+input[type="submit"]:hover {
+    background: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão secundário (branco com borda preta) */
+button {
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+button:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    color: #fff;
+    background: #000;
+    font-size: 0.9rem;
+}
+
+/*
+ * =================================================================
+ * MEDIA QUERIES (RESPONSIVIDADE)
+ * =================================================================
+ */
+
+/* Tablets e Telas Médias (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Empilha a Sidebar e o Main */
+    .layout {
+        flex-direction: column;
+        margin: 30px 0;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    /* Sidebar ocupa toda a largura */
+    .sidebar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Centraliza a Navbar */
+    nav ul {
+        justify-content: center;
+        overflow-x: auto;
+    }
+}
+
+/* Celulares (max-width: 600px) */
+@media (max-width: 600px) {
+    /* Ajustes gerais de espaçamento */
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Oculta o parágrafo no header para economizar espaço */
+    header p {
+        display: none;
+    }
+
+    .layout {
+        padding: 0 15px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    /* Empilha os botões para telas pequenas */
+    .btn-area {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="submit"], button {
+        width: 100%; /* Botões ocupam a largura total */
+        padding: 12px 18px;
+    }
+}

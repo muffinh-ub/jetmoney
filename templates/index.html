@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-$END$
+
+<header>
+    <h1>JetMoney</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/noticias">Últimas Notícias</a></li>
+        <li><a href="/investir">Como Investir</a></li>
+        <li><a href="/business">Business</a></li>
+        <li><a href="/dashboards">Dashboards</a></li>
+        <li><a href="/transacoes">Transações</a></li>
+    </ul>
+</nav>
+
+<div class="layout">
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="/noticias">Últimas Notícias</a></li>
+            <li><a href="/investir">Como Investir</a></li>
+            <li><a href="/business">Business</a></li>
+            <li><a href="/dashboards">Dashboards</a></li>
+            <li><a href="/transacoes">Nova Transação</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <h2>Últimas Notícias do Mercado</h2>
+
+        <div class="cards-container">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <h3>Bolsa fecha em alta</h3>
+                <p>A Ibovespa encerra o dia com valorização puxada por setor bancário.</p>
+                <a href="#" class="btn-card">Ler mais</a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <h3>Dólar recua</h3>
+                <p>Moeda americana cai com otimismo global e fluxo estrangeiro.</p>
+                <a href="#" class="btn-card">Ler mais</a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <h3>Startup cresce 200%</h3>
+                <p>Empresa brasileira de IA atrai investimentos e expande operações.</p>
+                <a href="#" class="btn-card">Ler mais</a>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<footer>
+    <p>© 2025 — Sistema de Consultoria Financeira | JetMoney</p>
+</footer>
+
 </body>
 </html>
