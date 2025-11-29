@@ -2,7 +2,7 @@ import pymysql, os
 
 class pysql:
     def __init__(self):
-        senha = os.getenv("AIVEN_PASSWORD")
+        senha = os.getenv("AIVEN_PASSWORD") # pega o valor da var de ambiente definida no servidor
         self.config = {
             "host": "mysql-jetmoney.k.aivencloud.com",
             "user": "avnadmin",
